@@ -6,36 +6,32 @@ Author: Aidan Hackett
 
 */
 
-
- class Rover {
+class Rover {
     int xPosition;
     int yPosition;
     char compassDirection;
 
+    /* Construction method - takes values from user input */
     Rover(int x, int y, char c) {
-
         this.xPosition = x;
         this.yPosition = y;
         this.compassDirection = c; 
     }
 
-    public void setPosition(String roverAction) {
+    public void setPosition(char roverAction) {
         
         switch (roverAction) {
             
-            case "L":
+            case 'L':
                 this.compassDirection = turnCompass(this.compassDirection, false);
-                System.out.println(roverAction);
             break;
             
-            case "R":
+            case 'R':
                 this.compassDirection = turnCompass(this.compassDirection, true);
-                System.out.println(roverAction);
             break;
             
-            case "M":
+            case 'M':
                 roverMove(this.compassDirection);
-                System.out.println(roverAction);
             break;
             
             default:
@@ -104,7 +100,7 @@ Author: Aidan Hackett
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Mars Rover Calculator!");
+        System.out.println("Welcome to Mars Rover Movement Calculator!");
 
 /* Custom plateau input - for now use 5, 5 */
 /*       
@@ -123,14 +119,19 @@ public class Main {
         int platY = 5;
         
         /* Set initial rover position */
-        Rover rover = new Rover(0, 0, 'W');
-        System.out.println(rover.xPosition + " " + rover.yPosition + " " + rover.compassDirection);
+        Rover roverA = new Rover(1, 2, 'N');
+        System.out.println(roverA.xPosition + " " + roverA.yPosition + " " + roverA.compassDirection);
         
         /*  Take movement input */
-        rover.setPosition("M");
+        String movements = new String();
+        movements = "LMLMLMLMM";
+        
+        for(int i = 0; i < movements.length(); i++) {
+            roverA.setPosition(movements.charAt(i));
+        }
 
         /* Provide output */
-        System.out.println(rover.xPosition + " " + rover.yPosition + " " + rover.compassDirection);
+        System.out.println(roverA.xPosition + " " + roverA.yPosition + " " + roverA.compassDirection);
         
     }
 
