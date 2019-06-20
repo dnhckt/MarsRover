@@ -1,19 +1,20 @@
 import java.util.Scanner;
+import java.awt.Point; 
+
 
 /*
 Mars Rover Mainfile (executable)        
 Author: Aidan Hackett
+javac *.java && java Main
+
+To do:
+Prevent out of bounds
+Add custom inputs
+
 */
 
 
-
 public class Main {
-
-    public static void traversePlateau(String movements, Rover rover) {        
-        for(int i = 0; i < movements.length(); i++) {
-            rover.roverAction(movements.charAt(i));
-        }
-    }
 
     public static void main(String[] args) {
 
@@ -31,17 +32,16 @@ public class Main {
 
         System.out.println("You entered" + platX + ", " + playY);
 */  
-        Plateau mars = new Plateau(5, 5);
+        
+        // Pair<Integer, Integer> plateau = new Pair<>(6,7);
+        intPair plateau = new intPair(5, 5);
 
-        Rover roverA = new Rover(1, 2, 'N');
-        roverA.roverStatus();
-        traversePlateau("LMLMLMLMM", roverA);
-        roverA.roverStatus();
+        Rover roverA = new Rover(1, 2, 'N', plateau);
+        Rover roverB = new Rover(3, 3, 'E', plateau);
 
-        Rover roverB = new Rover(3, 3, 'E');
-        roverB.roverStatus();
-        traversePlateau("MMRMMRMRRM", roverB);
-        roverB.roverStatus();
+         roverA.roverGo("LMLMLMLMM");
+
+         roverB.roverGo("MMRMMRMRRM");
     }
 
 }
