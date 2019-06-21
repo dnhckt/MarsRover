@@ -16,25 +16,27 @@ Add custom inputs
 
 public class Main {
 
+
     public static void main(String[] args) {
 
         System.out.println("Welcome to Mars Rover Movement Calculator!");
 
-/* Custom plateau input - for now use 5, 5 */
-/*       
         Scanner userInput = new Scanner(System.in);
         int platX, platY;
+        int roverAx, roverAy, roverAdir;
+        int roverBx, roverBy, roverBdir;
 
-        System.out.println("Enter the size of the Plateau's x dimension:");
+        System.out.println("Enter the size of the Plateau's dimensions (x,y):");
         platX  = userInput.nextInt(); 
-        System.out.println("Enter the size of the Plateau's y dimension:");
         platY = userInput.nextInt(); 
 
         System.out.println("You entered" + platX + ", " + playY);
-*/  
+
+        System.out.println("Enter the First Rover's X Coordinate:");
+       1 = userInput.nextInt(); 
         
-        // Pair<Integer, Integer> plateau = new Pair<>(6,7);
-        intPair plateau = new intPair(5, 5);
+
+        intPair plateau = new intPair(platX, platY);
 
         Rover roverA = new Rover(1, 2, 'N', plateau);
         Rover roverB = new Rover(3, 3, 'E', plateau);

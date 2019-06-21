@@ -1,7 +1,7 @@
 public class intPair {
 
-    private int X;
-    private int Y;
+    private final int X;
+    private final int Y;
     
     intPair(int x, int y) {
         this.X = x;
