@@ -52,7 +52,7 @@ public class Rover {
             
             case moveForward:
                 this.roverWalk(this.roverDirection);
-                this.motorWalk(this.xPosition. this.yPosition, this.roverBounds, this.roverDirection);
+                // this.motorWalk(this.xPosition, this.yPosition, this.roverBounds, this.roverDirection);
 
             break;
             
@@ -69,7 +69,7 @@ public class Rover {
         switch (direction) {
         
             case 'N':
-                if (this.yPosition < roverBounds.getY)
+                if (this.yPosition < roverBounds.getY())
                     this.yPosition = this.yPosition + 1;
 
                 else
@@ -77,7 +77,7 @@ public class Rover {
             break;
         
             case 'E':
-                if (this.xPosition < roverBounds.getX) 
+                if (this.xPosition < roverBounds.getX()) 
                     this.xPosition = this.xPosition + 1;
             
                 else
@@ -104,7 +104,6 @@ public class Rover {
     }
 
 
-    }
-
-
 }
+
+
