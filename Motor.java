@@ -42,6 +42,26 @@ public class Motor {
         return direction;
     }
 
+    public static int motorWalk(int position, int boundary, boolean goForwards) {
+
+            if (goForwards) {
+                if (position < boundary)
+                    position = position + 1;
+                else
+                    System.out.println("Out of bounds!");
+            }    
+
+            else {
+                if (position > 0)
+                    position = position - 1;
+                else
+                    System.out.println("Out of bounds!");
+            }
+
+            return position;
+    }
+
+
     // public int motorMoveNorth(int y) {
     //     return y + 1;
     // }  

@@ -1,4 +1,9 @@
 public class Rover {
+    public static final char North = 'N';
+    public static final char East = 'E';
+    public static final char South = 'S';
+    public static final char West = 'W';
+
     public static final char turnLeft = 'L';
     public static final char turnRight = 'R';
     public static final char moveForward = 'M';
@@ -51,58 +56,34 @@ public class Rover {
             break;
             
             case moveForward:
-                this.roverWalk(this.roverDirection);
-                // this.motorWalk(this.xPosition, this.yPosition, this.roverBounds, this.roverDirection);
 
+                switch (this.roverDirection) {
+                    case 'N':
+                        this.yPosition = motor.motorWalk(this.yPosition, this.roverBounds.getY(), true);
+                    break;
+                    case 'E':
+                        this.xPosition = motor.motorWalk(this.xPosition, this.roverBounds.getX(), true);
+                    break;
+                    case 'S':
+                        this.yPosition = motor.motorWalk(this.yPosition, this.roverBounds.getY(), false);
+                    break;
+                    case 'W':
+                        this.xPosition = motor.motorWalk(this.xPosition, this.roverBounds.getX(), false);
+                    break;
+                    default:
+                        System.out.println("Sorry, invalid direction. Must be N, W, S or E!");
+                    break;        
+                }
+                
             break;
             
             default:
-                System.out.println("Sorry, invalid input");
+                System.out.println("Sorry, invalid action. Must be L, R, or M!");
             break;
 
         }
 
     }
-
-    private void roverWalk(char direction) {
-
-        switch (direction) {
-        
-            case 'N':
-                if (this.yPosition < roverBounds.getY())
-                    this.yPosition = this.yPosition + 1;
-
-                else
-                    System.out.println("Out of bounds!"); 
-            break;
-        
-            case 'E':
-                if (this.xPosition < roverBounds.getX()) 
-                    this.xPosition = this.xPosition + 1;
-            
-                else
-                    System.out.println("Out of bounds!"); 
-            break;
-        
-            case 'S':
-                if (this.yPosition > 0)
-                    this.yPosition = this.yPosition - 1;
-            
-                else 
-                    System.out.println("Out of bounds!");
-            break;
-        
-            case 'W':
-                if (this.xPosition > 0)
-                    this.xPosition = this.xPosition - 1;
-            
-                else
-                    System.out.println("Out of bounds!");
-            break;
-
-        }
-    }
-
 
 }
 
