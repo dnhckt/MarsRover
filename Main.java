@@ -8,14 +8,9 @@ import java.util.Scanner;
  * This is an executable file - upon running, it will ask for user input in the command line. 
  * Requires Rover, Motor and IntPair classes.
  * 
- * Author: Aidan Hackett
+ * @author Aidan Hackett
  */
 
- /*
-To do:
-unit testing
-prevent too high initial input
-*/
 
 
 public class Main {

@@ -17,12 +17,12 @@ public class Rover {
     public static final char turnRight = 'R';
     public static final char moveForward = 'M';
 
-    int xPosition; 
-    int yPosition;
-    char roverDirection;
+    private int xPosition; 
+    private int yPosition;
+    private char roverDirection;
     IntPair roverBounds;
 
-    Motor motor;
+    private Motor motor;
 
     /**
      * Constructor for Rover
@@ -33,9 +33,21 @@ public class Rover {
      * @param bounds the bounds of the plateau (max values)
      */
     Rover (int x, int y, char c, IntPair bounds) {
-        this.xPosition = x;
-        this.yPosition = y;
+
+        this.motor = new Motor();
+
         this.roverBounds = new IntPair(bounds.getX(), bounds.getY());
+        
+        if (bounds.getX() > x)
+            this.xPosition = x;
+        else 
+            System.out.println("X value cannot be higher than the plateau size!");
+
+        if (bounds.getY() > y)
+            this.yPosition = y;
+        else 
+            System.out.println("Y value cannot be higher than the plateau size!");
+
         this.roverDirection = c;
     }
 
@@ -92,7 +104,7 @@ public class Rover {
             case moveForward:
 
                 /* Check N, E, S or W */
-                
+
                 switch (this.roverDirection) {
                     case North:
                         this.yPosition = motor.motorWalk(this.yPosition, this.roverBounds.getY(), true);

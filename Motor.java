@@ -21,7 +21,7 @@ public class Motor {
      * @return The new direction rover is facing 
      */
 
-    public static char motorTurn(char direction, boolean clockwise) {
+    public char motorTurn(char direction, boolean clockwise) {
 
         switch (direction) {
 
@@ -70,7 +70,7 @@ public class Motor {
      * @return the new x or y value for the rover 
      */
 
-    public static int motorWalk(int position, int boundary, boolean goForwards) {
+    public int motorWalk(int position, int boundary, boolean goForwards) {
 
             if (goForwards) {
                 if (position < boundary)
