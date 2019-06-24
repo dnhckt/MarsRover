@@ -33,7 +33,7 @@ public class Main {
         userInput.nextLine(); // Needed to take string input
 
         System.out.println("Enter the First Rover's coordinates (x, y, direction):");
-        Rover roverA = new Rover(userInput.nextInt(), userInput.nextInt(), userInput.next().charAt(0), plateauSize);
+        Rover roverA = new Rover(userInput.nextInt(), userInput.nextInt(), userInput.next().charAt(0), plateauSize); 
        
         userInput.nextLine(); // Needed to take string input
 
@@ -48,7 +48,8 @@ public class Main {
         System.out.println("Enter the Second Rover's instructions (L, R, M):");
         String actionsB = userInput.nextLine(); 
 
-        roverA.roverGo(actionsA);
+        // Pass instruction strings e.g. ("LMLMLMLMM") to roverGo method
+        roverA.roverGo(actionsA); 
         roverB.roverGo(actionsB);
 
         userInput.close();

@@ -1,7 +1,7 @@
 /** 
  * Motor
  * ======
- * Used to handle Rover movements: changing direction (motorTurn) and moving forward (motorWalk)  
+ * Used to handle Rover movements: changing direction (motorTurn()) and moving forward (motorWalk())  
  * @author Aidan Hackett
  */
 
@@ -14,6 +14,7 @@ public class Motor {
 
     /**
      * motorTurn
+     * =======
      * Returns a new direction after turning left or right  
      * @param direction initial direction N, E S or W 
      * @param clockwise if true move clockwise (turn right), else move anti-clockwise (turn left)
@@ -61,6 +62,7 @@ public class Motor {
 
     /**
      * motorWalk
+     * ==========
      * If within bounds, update the rover position
      * @param position x or y value to update
      * @param boundary the bounds of the plateau (max value)   

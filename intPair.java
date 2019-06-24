@@ -1,9 +1,16 @@
-public class intPair {
+/**
+ * IntPair
+ * ======
+ * Used to store and return plateau coordinates within which a rover can traverse
+ * @author Aidan Hackett
+ */
+
+public class IntPair {
 
     private final int X;
     private final int Y;
     
-    intPair(int x, int y) {
+    IntPair(int x, int y) {
         this.X = x;
         this.Y = y;
     }  
