@@ -1,9 +1,10 @@
 
 /**
  * Rover
- * ======
+ * -
  * This entity represents the position of a Mars Rover within a given plateau
  * Contains methods roverGo(), roverStatus(), and roverAction()
+ * 
  * @author Aidan Hackett
  */
 
@@ -26,7 +27,7 @@ public class Rover {
 
     /**
      * Constructor for Rover
-     * ============
+     * -
      * @param x the x co-ordinate of the Rover (horizontal axis)
      * @param y the y co-ordinate of the Rover (vertical axis)
      * @param c the direction of the Rover (N/E/S/W)

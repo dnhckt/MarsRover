@@ -1,6 +1,6 @@
 /**
  * IntPair
- * ======
+ * -
  * Used to store and return plateau coordinates within which a rover can traverse
  * @author Aidan Hackett
  */

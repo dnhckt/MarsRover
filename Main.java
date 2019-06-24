@@ -3,11 +3,10 @@ import java.util.Scanner;
 
 /**
  * Main.java 
- * =========
+ * -
  * 
  * This is an executable file - upon running, it will ask for user input in the command line. 
  * Requires Rover, Motor and IntPair classes.
- * 
  * @author Aidan Hackett
  */
 
