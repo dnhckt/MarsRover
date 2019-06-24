@@ -19,8 +19,8 @@ public class Rover {
     int xPosition; 
     int yPosition;
     char roverDirection;
-    
-    IntPair roverBounds; 
+    IntPair roverBounds;
+
     Motor motor;
 
     /**
@@ -30,17 +30,19 @@ public class Rover {
      * @param c the direction of the Rover (N/E/S/W)
      * @param bounds the bounds of the plateau (max values)
      */
-    
     Rover (int x, int y, char c, IntPair bounds) {
 
         this.xPosition = x;
         this.yPosition = y;
-
         this.roverBounds = new IntPair(bounds.getX(), bounds.getY());
         this.roverDirection = c;
 
     }
 
+    /**
+     * 
+     * @param instructions
+     */
     public void roverGo(String instructions) {
     
         this.roverStatus();
@@ -53,7 +55,7 @@ public class Rover {
 
     } 
 
-    public void roverStatus() {
+    private void roverStatus() {
 
         System.out.println(this.xPosition + " " + this.yPosition + " " + this.roverDirection);
     
