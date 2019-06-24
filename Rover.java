@@ -1,3 +1,11 @@
+
+/**
+ * Rover
+ * ======
+ * This entity represents the position of a Mars Rover within a given plateau
+ * @author Aidan Hackett
+ */
+
 public class Rover {
     public static final char North = 'N';
     public static final char East = 'E';
@@ -10,17 +18,25 @@ public class Rover {
 
     int xPosition; 
     int yPosition;
-    intPair roverBounds; 
     char roverDirection;
-
-    Motor motor;
     
-    Rover (int x, int y, char c, intPair bounds) {
+    IntPair roverBounds; 
+    Motor motor;
+
+    /**
+     * Constructor for Rover
+     * @param x the x co-ordinate of the Rover (horizontal axis)
+     * @param y the y co-ordinate of the Rover (vertical axis)
+     * @param c the direction of the Rover (N/E/S/W)
+     * @param bounds the bounds of the plateau (max values)
+     */
+    
+    Rover (int x, int y, char c, IntPair bounds) {
 
         this.xPosition = x;
         this.yPosition = y;
 
-        this.roverBounds = new intPair(bounds.getX(), bounds.getY());
+        this.roverBounds = new IntPair(bounds.getX(), bounds.getY());
         this.roverDirection = c;
 
     }
