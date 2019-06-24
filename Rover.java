@@ -39,12 +39,12 @@ public class Rover {
 
         this.roverBounds = new IntPair(bounds.getX(), bounds.getY());
         
-        if (bounds.getX() > x)
+        if (bounds.getX() >= x)
             this.xPosition = x;
         else 
             System.out.println("X value cannot be higher than the plateau size!");
 
-        if (bounds.getY() > y)
+        if (bounds.getY() >= y)
             this.yPosition = y;
         else 
             System.out.println("Y value cannot be higher than the plateau size!");

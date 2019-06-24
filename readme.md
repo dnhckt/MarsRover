@@ -8,6 +8,8 @@ Files:
     * Motor.java
     * IntPair.java
 
+Javadocs can be found under /doc.
+
 ## How To Run
 
 ```bash
